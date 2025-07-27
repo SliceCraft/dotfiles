@@ -17,7 +17,9 @@ customCommands:
     command: "gh pr create --web"
     context: 'localBranches'
     output: terminal
+    description: Create a PR
   - key: 'G'
     command: "gh pr view --web"
     context: 'localBranches'
+    description: Open the PR of the current branch
 notARepository: skip
