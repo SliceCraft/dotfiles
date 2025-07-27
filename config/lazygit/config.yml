@@ -1,0 +1,23 @@
+gui:
+  authorColors:
+    # SliceCraft is my git name, Slice is the name used when performing github actions
+    'SliceCraft': '#FF0000'
+    'Slice': '#FF6B6B'
+    # AFuxy and Zak are related in the same way
+    'AFuxy': '#00FFFF'
+    'Zak': '#5EC0D6'
+  scrollPastBottom: false
+  showNumstatInFilesView: true
+git:
+  parseEmoji: true
+confirmOnQuit: true
+disableStartupPopups: true
+customCommands:
+  - key: 'O'
+    command: "gh pr create --web"
+    context: 'localBranches'
+    output: terminal
+  - key: 'G'
+    command: "gh pr view --web"
+    context: 'localBranches'
+notARepository: skip
