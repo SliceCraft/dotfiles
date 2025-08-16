@@ -10,6 +10,8 @@ gui:
   showNumstatInFilesView: true
 git:
   parseEmoji: true
+  localBranchSortOrder: date
+  remoteBranchSortOrder: date
 confirmOnQuit: true
 disableStartupPopups: true
 customCommands:
