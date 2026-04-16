@@ -1,6 +1,4 @@
 # dotfiles
-My settings and apps, this is setup to work on Windows
+My personal dotfiles for my own setups, feel free to take anything from here if you think its useful to you.
+I don't accept changes as this is meant for my own personal use.
 
-# Install
-Install all apps with `winget import wingetexport`  
-Then setup all the links with by running the `install.bat` script as administrator in the `scripts` folder
