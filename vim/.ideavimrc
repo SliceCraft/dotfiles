@@ -1,0 +1,97 @@
+source ~/.vimrc
+
+" backspace word delete
+imap <C-BS> <C-W>
+
+"'gc' + gesture to comment out lines
+set commentary
+"'cs' to change surrounding like quotes from " to '
+set surround
+set ideajoin
+set multiple-cursors
+set which-key
+set timeoutlen=10000
+
+" my pgup and pgdn keys are way too close to my arrow keys
+imap <PageUp>   <Nop>
+imap <PageDown> <Nop>
+
+" quick ide actions
+map <Leader>\ <Action>(Refactorings.QuickListPopupAction)
+map <Leader>e <Action>(GotoNextError)
+map <Leader>r <Action>(ChooseRunConfiguration)
+map <Leader>R <Action>(RenameElement)
+" I mostly use Ctrl+n or Ctrl+N to do this right now
+map <Leader>t <Action>(SearchEverywhere)
+map <Leader>u <Action>(GotoSuperMethod)
+map <Leader>i <Action>(GotoImplementation)
+map <Leader>o <Action>(ManageRecentProjects)
+map <Leader>z <Action>(ToggleZenMode)
+map <Leader>a <Action>(Annotate)
+map <Leader>s <Action>(FileStructurePopup)
+map <Leader>F <Action>(FindInPath)
+map <Leader>l <Action>(RestoreDefaultLayout)
+nmap ,        <Action>(ShowIntentionActions)
+nmap <Tab>    <Action>(ShowErrorDescription)
+nmap <S-Tab>  <Action>(JumpToLastWindow)
+
+" code review
+map <Leader>rn <Action>(Code.Review.Editor.New.Comment)
+map <Leader>rd <Action>(Code.Review.Editor.Show.Diff)
+
+" github
+map <Leader>rs <Action>(GitHub.PullRequest.Review.Submit)
+map <Leader>ra <Action>(Github.PullRequest.Approve)
+map <Leader>rm <Action>(Github.PullRequest.Merge)
+
+" reload config
+map <Leader>, :source ~/.ideavimrc<CR>
+
+map <C-h> <Action>(PreviousTab)
+map <C-l> <Action>(NextTab)
+
+" window actions
+map <Leader>wt <Action>(ActivateTerminalToolWindow)
+map <Leader>wd <Action>(ActivateDebugToolWindow)
+map <Leader>ws <Action>(ActivateProjectToolWindow)
+map <Leader>we <Action>(ActivateProblemsViewToolWindow)
+map <Leader>wi <Action>(NavigateToImmediateWindow)
+map <Leader>wr <Action>(ActivateRunToolWindow)
+map <Leader>wf <Action>(ActivateStructureToolWindow)
+map <Leader>ww <Action>(HideAllWindows)
+
+" extract actions
+map <Leader>xi <Action>(ExtractInterface)
+map <Leader>xm <Action>(ExtractMethod)
+
+map <Leader>cv <Action>(IntroduceVariable)
+map <Leader>ci <Action>(Inline)
+map <Leader>cf <Action>(IntroduceField)
+map <Leader>cp <Action>(IntroduceParameter)
+map <Leader>cc <Action>(IntroduceConstant)
+
+nmap gr <Action>(GotoSuperMethod)
+nmap gu <Action>(ShowUsages)
+" make sure to always use the jetbrains version
+map gd   <Action>(GotoDeclaration)
+
+" fix things
+nmap <Leader>ff <Action>(ReformatCode)
+nmap <Leader>fi <Action>(OptimizeImports)
+
+" always use jetbrains jumplist
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
+" remap multiple cursor shortcuts
+nmap <C-d> <Plug>NextWholeOccurrence
+xmap <C-d> <Plug>NextWholeOccurrence
+nmap g<C-d> <Plug>NextOccurrence
+xmap g<C-d> <Plug>NextOccurrence
+nmap <C-x> <Plug>SkipOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+nmap <C-p> <Plug>RemoveOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" help I forgot the keybinds, show me the config
+nnoremap <Leader>? :e ~/.ideavimrc<CR>
