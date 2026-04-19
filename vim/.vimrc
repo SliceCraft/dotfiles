@@ -28,8 +28,8 @@ set updatetime=500
 
 " write quit shortcuts
 nnoremap <Leader>w   :w<CR>
-nnoremap <Leader>Q   :q!<CR>
-nnoremap <Leader>q   :wq<CR>
+nnoremap <Leader>q   :q!<CR>
+nnoremap <Leader>Q   :wq<CR>
 
 " word deletion
 imap <C-h> <C-W>
